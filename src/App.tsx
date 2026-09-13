@@ -7,11 +7,21 @@ import type { ITechnology } from "./types/type";
 import { Bounce, ToastContainer } from "react-toastify";
 import Loading from "./components/Loading";
 
-const technologiesPromise = async (): Promise<ITechnology[]> => {
+/* const technologiesPromise = async (): Promise<ITechnology[]> => {
   const res = await fetch("/public/technology.json");
   const data = await res.json();
   return data;
-};
+}; */
+
+const technologiesPromise: Promise<ITechnology[]> = fetch(
+  "/technology.json",
+).then((res) => {
+  if (!res.ok) {
+    throw new Error("Failed to fetch technology data");
+  }
+
+  return res.json();
+});
 
 const App = () => {
   return (
@@ -19,7 +29,7 @@ const App = () => {
       <NavBar />
       <Banner />
       <Suspense fallback={<Loading />}>
-        <Technologies technologiesPromise={technologiesPromise()} />
+        <Technologies technologiesPromise={technologiesPromise} />
       </Suspense>
       <Footer />
       <ToastContainer
