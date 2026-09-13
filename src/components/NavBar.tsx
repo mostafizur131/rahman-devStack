@@ -16,7 +16,6 @@ const NavBar = () => {
             ☰
           </button>
 
-          {/* Logo */}
           <a href="/" className="flex items-center">
             <img
               src="/src/assets/logo-text.png"
@@ -25,7 +24,6 @@ const NavBar = () => {
             />
           </a>
 
-          {/* Desktop Navigation */}
           <ul className="hidden items-center space-x-6 md:flex">
             <li>
               <a
@@ -73,7 +71,6 @@ const NavBar = () => {
             </li>
           </ul>
 
-          {/* Authentication Buttons */}
           <div className="flex items-center space-x-2">
             <button className="rounded-full px-3 py-2 text-sm font-semibold text-[#475569] hover:text-[#DB2777]">
               Sign In
