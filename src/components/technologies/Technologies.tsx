@@ -1,8 +1,15 @@
-import React from "react";
+import React, { use } from "react";
 import StackSidebar from "./StackSidebar";
 import TechnologyCard from "./TechnologyCard";
+import type { ITechnology } from "../../types/type";
 
-const Technologies = () => {
+export interface ITechnologiesProps {
+  technologiesPromise: Promise<ITechnology[]>;
+}
+
+const Technologies = ({ technologiesPromise }: ITechnologiesProps) => {
+  const technologies = use(technologiesPromise);
+
   return (
     <section className="container mx-auto px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
       <div className="mb-8">
@@ -20,13 +27,9 @@ const Technologies = () => {
 
       <div className="grid grid-cols-1 gap-6 lg:grid-cols-4">
         <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:col-span-3 lg:grid-cols-3">
-          {/* {technologies.map((technology) => (
+          {technologies.map((technology) => (
             <TechnologyCard key={technology.id} technology={technology} />
-          ))} */}
-          <TechnologyCard />
-          <TechnologyCard />
-          <TechnologyCard />
-          <TechnologyCard />
+          ))}
         </div>
 
         <div className="lg:col-span-1">
