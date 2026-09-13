@@ -1,12 +1,23 @@
 import React from "react";
+import type { ITechnology } from "../../types/type";
 
-const TechnologyCard = ({ technology }) => {
+interface ITechnologyCardProps {
+  technology: ITechnology;
+  isAdded: boolean;
+  onAdd: (technology: ITechnology) => void;
+}
+
+const TechnologyCard = ({
+  technology,
+  isAdded,
+  onAdd,
+}: ITechnologyCardProps) => {
   return (
     <article className="flex min-h-[270px] flex-col rounded-xl border border-gray-100 bg-white p-4 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-md">
       <div className="mb-4 flex items-start justify-between gap-3">
         <img
           src={technology.icon}
-          alt={technology.name}
+          alt={`${technology.name} icon`}
           className="h-8 w-8 object-contain"
         />
 
@@ -38,9 +49,15 @@ const TechnologyCard = ({ technology }) => {
 
       <button
         type="button"
-        className="mt-auto w-full rounded-md bg-[#0B1220] px-4 py-2.5 text-xs font-medium text-white transition-colors duration-200 hover:bg-[#1E293B]"
+        disabled={isAdded}
+        onClick={() => onAdd(technology)}
+        className={`mt-auto w-full rounded-md px-4 py-2.5 text-xs font-medium transition-colors duration-200 ${
+          isAdded
+            ? "cursor-not-allowed bg-gray-200 text-gray-500"
+            : "bg-[#0B1220] text-white hover:bg-[#1E293B]"
+        }`}
       >
-        Add to Stack
+        {isAdded ? "✓ Added to Stack" : "Add to Stack"}
       </button>
     </article>
   );

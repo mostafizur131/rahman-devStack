@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { GiHamburgerMenu } from "react-icons/gi";
 
 const NavBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -13,7 +14,7 @@ const NavBar = () => {
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             className="text-2xl text-[#475569] md:hidden"
           >
-            ☰
+            <GiHamburgerMenu />
           </button>
 
           <a href="/" className="flex items-center">
