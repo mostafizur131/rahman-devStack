@@ -1,5 +1,3 @@
-import React from "react";
-
 const Loading = () => {
   return (
     <section className="container mx-auto flex min-h-[300px] w-full items-center justify-center px-4 py-10 sm:min-h-[350px] sm:px-6 sm:py-12 lg:min-h-[400px] lg:px-8 lg:py-16">
