@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
+import logo from "../assets/logo-text.png";
 
 const NavBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -18,11 +19,7 @@ const NavBar = () => {
           </button>
 
           <a href="/" className="flex items-center">
-            <img
-              src="/src/assets/logo-text.png"
-              alt="Dev Stack"
-              className="h-8"
-            />
+            <img src={logo} alt="Dev Stack" className="h-8" />
           </a>
 
           <ul className="hidden items-center space-x-6 md:flex">

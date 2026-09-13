@@ -1,3 +1,4 @@
+import bannerImage from "../assets/banner-stack.png";
 const Banner = () => {
   return (
     <section className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -15,7 +16,7 @@ const Banner = () => {
             them side by side, and put together the stack that fits your next
             project.
           </p>
-          {/* Buttons */}
+
           <div className="mt-8 flex justify-center gap-3 sm:gap-4 md:justify-start">
             <button
               type="button"
@@ -34,7 +35,7 @@ const Banner = () => {
         {/* Right Image */}
         <div className="flex w-full justify-center md:w-1/2">
           <img
-            src="/src/assets/banner-stack.png"
+            src={bannerImage}
             alt="Development stack"
             className="h-auto w-full max-w-sm object-contain sm:max-w-md lg:max-w-lg"
           />

@@ -1,15 +1,11 @@
+import footerLogo from "../assets/logo-text.png";
 const Footer = () => {
   return (
     <footer className="border-t border-slate-200 bg-white">
       <div className="mx-auto max-w-7xl px-6 py-12 lg:px-8">
         <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-4 lg:gap-16">
-          {/* Brand */}
           <div className="sm:col-span-2 lg:col-span-1">
-            <img
-              src="/src/assets/logo-text.png"
-              alt="Dev Stack"
-              className="h-8"
-            />
+            <img src={footerLogo} alt="Dev Stack" className="h-8" />
 
             <p className="mt-4 max-w-sm text-sm leading-6 text-slate-500">
               Curated tools, technologies, and resources for developers building
@@ -46,7 +42,6 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Product */}
           <div>
             <h3 className="text-xs font-semibold uppercase tracking-wider text-slate-900">
               Product
@@ -82,7 +77,6 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Company */}
           <div>
             <h3 className="text-xs font-semibold uppercase tracking-wider text-slate-900">
               Company
@@ -118,7 +112,6 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Legal */}
           <div>
             <h3 className="text-xs font-semibold uppercase tracking-wider text-slate-900">
               Legal
@@ -146,7 +139,6 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Bottom bar */}
         <div className="mt-12 flex flex-col gap-4 border-t border-slate-200 pt-6 sm:flex-row sm:items-center sm:justify-between">
           <p className="text-xs text-slate-400">
             © {new Date().getFullYear()} Dev Stack. All rights reserved.
