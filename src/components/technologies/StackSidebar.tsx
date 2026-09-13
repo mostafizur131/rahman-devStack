@@ -1,4 +1,3 @@
-import React from "react";
 import type { ITechnology } from "../../types/type";
 
 interface IStackSidebarProps {

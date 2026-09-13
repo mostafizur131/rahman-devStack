@@ -1,4 +1,3 @@
-import React from "react";
 import type { ITechnology } from "../../types/type";
 
 interface ITechnologyCardProps {
@@ -49,11 +48,10 @@ const TechnologyCard = ({
 
       <button
         type="button"
-        disabled={isAdded}
         onClick={() => onAdd(technology)}
         className={`mt-auto w-full rounded-md px-4 py-2.5 text-xs font-medium transition-colors duration-200 ${
           isAdded
-            ? "cursor-not-allowed bg-gray-200 text-gray-500"
+            ? "cursor-pointer bg-gray-200 text-gray-500"
             : "bg-[#0B1220] text-white hover:bg-[#1E293B]"
         }`}
       >

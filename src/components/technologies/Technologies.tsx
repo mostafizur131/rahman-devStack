@@ -1,4 +1,4 @@
-import React, { use, useState } from "react";
+import { use, useState } from "react";
 import StackSidebar from "./StackSidebar";
 import TechnologyCard from "./TechnologyCard";
 import type { ITechnology } from "../../types/type";
@@ -32,7 +32,7 @@ const Technologies = ({ technologiesPromise }: ITechnologiesProps) => {
     toast.success(`${technology.name} added to your stack!`);
   };
 
-  // Remove one technology
+  // Remove one by id
   const handleRemove = (id: number) => {
     const technology = selectedTechnology.find((item) => item.id === id);
 
@@ -45,7 +45,7 @@ const Technologies = ({ technologiesPromise }: ITechnologiesProps) => {
     }
   };
 
-  // Remove all technologies
+  // Remove all
   const handleRemoveAll = () => {
     if (selectedTechnology.length === 0) {
       toast.warning("Your stack is already empty.");

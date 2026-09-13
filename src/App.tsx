@@ -1,4 +1,4 @@
-import React, { Suspense } from "react";
+import { Suspense } from "react";
 import NavBar from "./components/NavBar";
 import Banner from "./components/Banner";
 import Technologies from "./components/technologies/Technologies";
